@@ -1,6 +1,16 @@
-<div align="center" id="top">
+# Human Race GPT Researcher - Emergency Planner App Version
 
-<img src="https://github.com/assafelovic/gpt-researcher/assets/13554167/20af8286-b386-44a5-9a83-3be1365139c3" alt="Logo" width="80">
+This is a modified version of GPT Researcher, tailored for use in the Human Race Emergency Planner application. 
+It is designed to provide research and analysis capabilities specifically for emergency planning and related tasks.
+
+---
+
+**Please refer to [SETUP_INSTRUCTIONS.md](SETUP_INSTRUCTIONS.md) for detailed instructions on how to set up and run this application.**
+
+<div align="center" id="top">
+  
+
+  
 
 ####
 
@@ -40,10 +50,6 @@ https://github.com/user-attachments/assets/2cc38f6a-9f66-4644-9e69-a46c40e296d4
 ## Architecture
 
 The core idea is to utilize 'planner' and 'execution' agents. The planner generates research questions, while the execution agents gather relevant information. The publisher then aggregates all findings into a comprehensive report.
-
-<div align="center">
-<img align="center" height="600" src="https://github.com/assafelovic/gpt-researcher/assets/13554167/4ac896fd-63ab-4b77-9688-ff62aafcc527">
-</div>
 
 Steps:
 * Create a task-specific agent based on a research query.
@@ -207,9 +213,8 @@ For detailed setup instructions and more information about the frontend features
 We highly welcome contributions! Please check out [contributing](https://github.com/assafelovic/gpt-researcher/blob/master/CONTRIBUTING.md) if you're interested.
 
 Please check out our [roadmap](https://trello.com/b/3O7KBePw/gpt-researcher-roadmap) page and reach out to us via our [Discord community](https://discord.gg/QgZXvJAccX) if you're interested in joining our mission.
-<a href="https://github.com/assafelovic/gpt-researcher/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=assafelovic/gpt-researcher" />
-</a>
+
+
 ## ✉️ Support / Contact us
 - [Community Discord](https://discord.gg/spBgZmm3Xe)
 - Author Email: assaf.elovic@gmail.com
