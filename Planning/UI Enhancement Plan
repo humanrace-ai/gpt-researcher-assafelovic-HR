@@ -1,0 +1,93 @@
+# UI Phase Plan for Admin Dashboard and Enhancements
+
+**Deployment Target:** Heroku
+
+This document outlines a phased approach to implement the Admin Dashboard UI, building on our existing UI functionality and API integration. Each phase includes clear objectives and testing milestones before progressing to the next stage. All new components must adhere to our established styling (Tailwind CSS + DaisyUI).
+
+---
+
+## Phase 1: Project Setup and Initial Configuration
+
+**Objective:**
+- Establish a clean workspace and branch for the UI enhancements.
+- Verify that the current frontend functions correctly while maintaining existing styling.
+
+**Tasks:**
+- Clone the repository locally.
+- Install all necessary dependencies.
+- Confirm that current UI components are rendering and styled as expected.
+- Create a new branch dedicated to the UI enhancement work.
+
+**Testing:**
+- Run existing frontend tests.
+- Perform manual validation to ensure the UI’s consistency with our established styling.
+
+---
+
+## Phase 2: Admin Dashboard Implementation
+
+**Objective:**
+- Develop a new Admin Dashboard page using Next.js with a two-column layout (left-hand navigation and main content area).
+- Integrate real-time API health monitoring that communicates with our existing Python backend.
+
+**Tasks:**
+- Create a Next.js page dedicated to the Admin Dashboard.
+- Develop UI components, such as the API Health Widget, Research Settings forms, and Model Selector, ensuring consistent styling.
+- Implement data fetching using polling (with SWR) or Server-Sent Events (SSE) to interface with the existing `/health` endpoint.
+- If necessary, create additional Next.js API routes to extend or wrap backend functionality.
+
+**Testing:**
+- Unit tests for individual UI components.
+- Integration tests for API communication.
+- Manual verification to check real-time updates and stylistic uniformity.
+
+---
+
+## Phase 3: Research Controls and Advanced Features
+
+**Objective:**
+- Enhance the dashboard with controls for managing research settings, model management, and multi-agent monitoring.
+- Introduce advanced visualizations and data monitoring features.
+
+**Tasks:**
+- Build UI components using forms and selectors for research settings; manage state with Zustand.
+- Develop new Next.js API endpoints if required for research settings updates and model selection.
+- Implement visual components such as the AgentGraph (using SVG) for monitoring multi-agent processes.
+- Add additional features such as prompt management, analytics displays, and circuit breaker functionalities.
+
+**Testing:**
+- Perform thorough unit testing on new components.
+- Stress-test API interactions and the real-time visualization components.
+- Execute integration tests to validate complete workflows (from UI input to backend response).
+
+---
+
+## Phase 4: Infrastructure Enhancements and Security
+
+**Objective:**
+- Integrate authentication and role-based access using Supabase.
+- Implement API key management, audit logs, and circuit breaker features.
+- Finalize deployment settings tailored for Heroku.
+
+**Tasks:**
+- Integrate Supabase authentication within the frontend and configure role-based access.
+- Implement security middleware and set up row-level security policies.
+- Develop endpoints for API key generation, revocation, and audit logs.
+- Configure deployment settings (environment variables, build configurations) suitable for Heroku.
+
+**Testing:**
+- End-to-end tests for authentication and authorization flows.
+- Conduct security audits and vulnerability scans.
+- Test deployment on a staging Heroku environment to ensure smooth operation.
+
+---
+
+## High-Level Architecture Diagram
+
+```mermaid
+graph TD
+    A[Next.js Admin Dashboard] --> B[Next.js API Routes]
+    A --> C[UI Components (Health Widget, Research Settings, Model Selector, AgentGraph)]
+    B --> D[Python Backend API (/health, etc.)]
+    D --> E[External Services (Database, Redis, Pub/Sub)]
+    A --> F[Supabase Auth & Role-Based Access]
