@@ -51,7 +51,7 @@ The project is divided into four phases, each with clear objectives, tasks, and 
 
 - **Phase 1: Project Setup and Initial Configuration**
   - **Objective:** Establish a clean workspace and dedicated branch while ensuring existing UI components function as expected.
-  - **Key Tasks:** Clone the repository, install dependencies, validate current UI styling, and create a new branch for enhancements.
+  - **Key Tasks:** Install dependencies, validate current UI styling, and create a new branch for enhancements.
   - **Testing:** Run existing frontend tests and conduct manual validations against our established styling.
 
 - **Phase 2: Admin Dashboard Implementation**
