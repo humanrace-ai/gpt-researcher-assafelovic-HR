@@ -74,9 +74,9 @@ The project is divided into four phases, each with clear objectives, tasks, and 
 ```mermaid
 graph TD
     A[Next.js Admin Dashboard] --> B[Next.js API Routes]
-    A --> C[UI Components (Health Widget, Research Settings, Model Selector, AgentGraph)]
-    B --> D[Python Backend API (/health, etc.)]
-    D --> E[External Services (Database, Redis, Pub/Sub)]
+    A --> C[UI Components: Health Widget, Research Settings, Model Selector, AgentGraph]
+    B --> D[Python Backend API: /health, etc.]
+    D --> E[External Services: Database, Redis, Pub/Sub]
     A --> F[Supabase Auth & Role-Based Access]
 ```
 
