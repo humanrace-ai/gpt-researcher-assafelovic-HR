@@ -9,6 +9,98 @@ It is designed to provide research and analysis capabilities specifically for em
 
 </div>
 
+## Phase One: Enhancements for the Emergency Planner App (Complete)
+
+- **Dedicated Endpoints:**  
+  Implemented specific endpoints for emergency planning tasks, including submission, updating, and retrieval of emergency plans.
+
+- **Real-Time Notifications:**  
+  Enabled real-time messaging to broadcast urgent alerts and updates to emergency responders.
+
+- **Geospatial Data Integration:**  
+  Integrated geolocation support to visualize incidents, resource locations, and safe zones for improved situational awareness.
+
+- **Enhanced Security & Access Control:**  
+  Added stricter token validation and role-based permissions to safeguard sensitive emergency data.
+
+- **Performance & Scalability Optimizations:**  
+  Optimized the API for high-load scenarios by enhancing data caching and load balancing capabilities.
+
+## Architecture Overview
+
+```mermaid
+graph LR
+  A[Core API Functionality] --> B[Emergency Planner Endpoints]
+  B --> C[Real-Time Notifications]
+  B --> D[Geospatial Data Integration]
+  B --> E[Enhanced Security & Access Control]
+  B --> F[Performance Optimizations]
+```
+
+</div>
+
+## Phase Two: UI Phase Plan for Admin Dashboard and Enhancements
+
+**Deployment Target:** Heroku
+
+This plan outlines a phased approach to enhance our Admin Dashboard UI, integrating advanced features and securing our deployment. All new components must adhere to our established styling with Tailwind CSS and DaisyUI.
+
+## Overview
+
+The project is divided into four phases, each with clear objectives, tasks, and testing milestones:
+
+- **Phase 1: Project Setup and Initial Configuration**
+  - **Objective:** Establish a clean workspace and dedicated branch while ensuring existing UI components function as expected.
+  - **Key Tasks:** Clone the repository, install dependencies, validate current UI styling, and create a new branch for enhancements.
+  - **Testing:** Run existing frontend tests and conduct manual validations against our established styling.
+
+- **Phase 2: Admin Dashboard Implementation**
+  - **Objective:** Develop a new Admin Dashboard page with a two-column layout (for navigation and main content) and integrate real-time API health monitoring.
+  - **Key Tasks:** Create a Next.js page for the dashboard, build UI components (API Health Widget, Research Settings forms, Model Selector), and implement data fetching (via polling/SWR or SSE) from the `/health` endpoint.
+  - **Testing:** Unit tests for components, integration tests for API communication, and manual verification of real-time updates and consistent styling.
+
+- **Phase 3: Research Controls and Advanced Features**
+  - **Objective:** Enhance the dashboard with controls for managing research settings, model management, and monitoring multi-agent processes.
+  - **Key Tasks:** Develop UI components using React (with state management via Zustand), build new Next.js API endpoints if necessary, and implement advanced visualizations (e.g., AgentGraph for multi-agent monitoring) along with features like prompt management and analytics.
+  - **Testing:** Perform thorough unit testing, stress-test API interactions, and execute integration tests to ensure seamless workflows.
+
+- **Phase 4: Infrastructure Enhancements and Security**
+  - **Objective:** Strengthen security by integrating authentication, API key management, and audit logs, and finalize deployment settings for Heroku.
+  - **Key Tasks:** Implement authentication and role-based access with Supabase, set up security middleware and row-level policies, develop endpoints for API key operations and audit logs, and configure deployment settings (environment variables, build configurations).
+  - **Testing:** Conduct end-to-end tests for authentication and authorization flows, complete security audits, and test the deployment on a staging Heroku environment.
+
+## High-Level Architecture
+
+```mermaid
+graph TD
+    A[Next.js Admin Dashboard] --> B[Next.js API Routes]
+    A --> C[UI Components (Health Widget, Research Settings, Model Selector, AgentGraph)]
+    B --> D[Python Backend API (/health, etc.)]
+    D --> E[External Services (Database, Redis, Pub/Sub)]
+    A --> F[Supabase Auth & Role-Based Access]
+```
+
+This phased plan ensures a structured and secure roll-out of the enhanced Admin Dashboard, focusing on reliability, real-time data integration, advanced research controls, and robust security measures.
+
+</div>
+
+## Future Work Overview
+The following phases outline upcoming work on the project. Detailed planning phases for each block are forthcoming.
+
+## Phase 3: Deployment to Heroku
+- **Description:**  
+  This phase focuses on deploying the application to Heroku. Key tasks include configuring environment variables, build settings, and ensuring that the application is fully optimized for the Heroku platform.
+
+## Phase 4: Integration Testing with The Emergency Planner App
+- **Description:**  
+  In this phase, the project will undergo integration testing with The Emergency Planner App. The objective is to verify seamless interactions between the enhanced Admin Dashboard and the emergency planning functionalities, ensuring reliable real-time data exchange.
+
+## Phase 5: Multi-Agent Implementation
+- **Description:**  
+  This phase will incorporate multi-agent capabilities into the system. It aims to develop new components that support concurrent agent operations, improving product quality, system scalability and resilience.
+
+</div>
+
 # 🔎 GPT Researcher
 
 **GPT Researcher is an open deep research agent designed for both web and local research on any given task.** 
